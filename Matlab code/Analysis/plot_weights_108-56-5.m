@@ -1,8 +1,8 @@
 
 path = '..\..\Python\';
 
-a = load(strcat(path,'weights_first_layer_norm_NN_108-18-5.txt'));
-b = load(strcat(path,'weights_second_layer_norm_NN_108-18-5.txt'));
+a = load(strcat(path,'weights_first_layer_norm_NN_108-56-5.txt'));
+b = load(strcat(path,'weights_second_layer_norm_NN_108-56-5.txt'));
 
 
 colorm = 'jet';

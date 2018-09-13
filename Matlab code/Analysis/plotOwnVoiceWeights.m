@@ -1,7 +1,7 @@
 
 path = '..\..\Python\';
-a = load(strcat(path,'weights_first_layer_norm_NN_108-18-2_ownVoice.txt'));
-b = load(strcat(path,'weights_second_layer_norm_NN_108-18-2_ownVoice.txt'));
+a = load(strcat(path,'weights_first_layer_norm_NN_36-19-2_ownVoice.txt'));
+b = load(strcat(path,'weights_second_layer_norm_NN_36-19-2_ownVoice.txt'));
 
 colorm = 'jet';
 
