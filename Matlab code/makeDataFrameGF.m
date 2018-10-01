@@ -1,7 +1,7 @@
 
 addpath('Pemo')
 path = 'x:\Steering\Recordings\Processed\';
-load(strcat(path,'Scenes_v2.mat'));
+load(strcat(path,'Scenes_v3.mat'));
 den = 1;
 freqRange = [0 1e4];
 [nrChannel, cf] = getGFBMultipleCenterERBs([0 1e4],den);
@@ -37,7 +37,7 @@ TrainingVector = [TrainingVector; gamma];
 
 
 %% Gammatone processing own voice 
-for idxSubjects = 1:3
+for idxSubjects = 1:4
     gamma = [];
     for idxEar = 1:2
         sprintf('Ear %.2d',idxEar)

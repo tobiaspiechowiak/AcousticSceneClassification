@@ -1,7 +1,7 @@
 
 addpath('Pemo')
 path = 'x:\Steering\Recordings\Processed\';
-load(strcat(path,'Scenes_v2.mat'));
+load(strcat(path,'Scenes_v3.mat'));
 fs = 20833;
 
 
@@ -54,7 +54,7 @@ FD(2).car(1).signal = Two_Mic_BF(car(2).mic(1).training(1).external,...
     car(2).mic(2).training(1).external,fs);
 
 %own voice
-for i = 1:3
+for i = 1:4
     
     FD(2).ownVoice(i).signal = Two_Mic_BF(ownVoice(2).mic(1).training(i).voice,...
         ownVoice(2).mic(2).training(i).voice,fs);

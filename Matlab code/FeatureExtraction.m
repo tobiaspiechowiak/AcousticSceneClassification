@@ -10,7 +10,7 @@ path_own_voice = strcat(path,'Own-voice/MaRiE/');
 
 
 disp('Own voice...')
-for idxSubject = 1:3
+for idxSubject = 1:4
     
     %first subject
     ownVoice(1).mic(1).training(idxSubject).external = resample(audioread(strcat(path_external,'01-Front_left_',sprintf('%0.2d',idxSubject),'.wav')),fsDsp,fs,100);
@@ -210,7 +210,7 @@ end
 % 
 
 disp('Save...')
-save('Scenes_v2.mat','ownVoice','car','canteen','meeting','traffic');
+save('Scenes_v3.mat','ownVoice','car','canteen','meeting','traffic');
 
 
 

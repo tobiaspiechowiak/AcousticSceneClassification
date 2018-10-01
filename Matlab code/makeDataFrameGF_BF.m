@@ -2,7 +2,7 @@
 addpath('Pemo')
 path = 'x:\Steering\Recordings\Processed\';
 load(strcat(path,'Beamformed_signals.mat'));
-den = 2;
+den = 1;
 freqRange = [0 1e4];
 [nrChannel, cf] = getGFBMultipleCenterERBs([0 1e4],den);
 blkSize = 32;
