@@ -2,7 +2,7 @@
 
 addpath('Pemo')
 path = 'x:\Steering\Recordings\Processed\';
-load(strcat(path,'Scenes_v2.mat'));
+load(strcat(path,'Scenes_v3.mat'));
 blkSize = 32;
 fsDsp = 20833;
 

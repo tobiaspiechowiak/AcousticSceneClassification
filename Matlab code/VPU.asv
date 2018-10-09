@@ -1,0 +1,57 @@
+
+path = '../../Data/';
+fsDSP = 20833;
+winLength = round(0.010*fsDSP);
+
+%load the signals
+[Mix(1).data,fs] = audioread(strcat(path,'Voice+Cantine.wav'));
+[Mix(2).data,~] = audioread(strcat(path,'Cantine.wav'));
+[Mix(3).data,~] = audioread(strcat(path,'Silence.wav'));
+
+for idx = 1:3
+    Mix(idx).data = resample(Mix(idx).data,fsDSP,fs,50);    
+    Mix(idx).max = max(Mix(idx).data);
+    Mix(idx).rms = rms(Mix(idx).data);
+    Mix(idx).spec = 20*log10(abs(spectrogram(Mix(idx).data,winLength,10,512,fsDSP)));
+end
+
+maxi = max([Mix(1).max Mix(2).max Mix(3).max]);
+
+f = linspace(0,fsDSP/2,512/2 +1 );
+
+figure; 
+
+scale = [-30 10];
+
+subplot(2,3,1);
+plot(Mix(1).data);
+set(gca,'YLim',[-0.6 0.6]);
+
+subplot(2,3,2);
+plot(Mix(2).data);
+set(gca,'YLim',[-0.6 0.6]);
+
+subplot(2,3,3);
+plot(Mix(3).data);
+set(gca,'YLim',[-0.6 0.6]);
+
+subplot(2,3,4);
+imagesc(f,Mix(1).spec,scale);
+set(gca, 'YDir','normal');
+
+subplot(2,3,5);
+imagesc(f,Mix(2).spec,scale);
+set(gca, 'YDir','normal');
+
+subplot(2,3,6);
+imagesc(f,Mix(3).spec,[-30 10]);
+set(gca, 'YDir','normal');
+
+
+
+
+
+
+
+
+

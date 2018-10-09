@@ -38,7 +38,7 @@ end
 
 
 %get levels right
-for j = 1:3 %across subjects
+for j = 1:4 %across subjects
     for i = 1:2
         for l = 1:3
             ownVoice(i).mic(l).training(j).external = 10^(refLevel/20)*ownVoice(i).mic(l).training(j).external/refRMS(j,1);
