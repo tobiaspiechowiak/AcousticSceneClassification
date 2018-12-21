@@ -27,10 +27,11 @@
 
 % BM type is 1 = Gammatone, 2 = DRNL, Added by Morten 24.05.2006
 
-function out = nlal_lim(in,Fs,limit);
-% min = 2e-4;   	  %lowest signal level - initial transient solution, MSc
+function out = nlal_lim(in,Fs,limit)
+ %min = 1e-4;   	  %lowest signal level - initial transient solution, MSc
 min = 1e-5;   	  %lowest signal level - initial transient solution, MSc
 %min = 1.2029e-007; %lowest signal level transient solution for drnl Plack 2002 Tobias
+%min= 1e-3;
 
 len=length(in);   %signal length
 out=in;

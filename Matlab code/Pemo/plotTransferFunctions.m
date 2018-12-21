@@ -6,7 +6,7 @@ freq = linspace(0, fs/2,512)';
 
 fig1 = figure;
 
-delta = [zeros(100,1); 1; zeros(fs * 0.2,1)];
+delta = [zeros(1000,1); 1; zeros(fs * 0.2,1)];
 
 %% Modulation filterbank
 
@@ -58,7 +58,7 @@ end
 
 
 set(gca,'YLim',[-10 5],'XLim',[0 1.1*1e4],...
-    'XTick',0:1000:1.1*1e4,'XScale','lin');
+    'XTick',0:1000:1.1*1e4,'XScale','log');
 
 hold on; 
 plot([0 1.1*1e4],[0 0],'k--','Linewidth',2);
@@ -87,7 +87,7 @@ end
 
 
 set(gca,'YLim',[-10 5],'XLim',[0 1.1*1e4],...
-    'XTick',0:1000:1.1*1e4,'XScale','lin');
+    'XTick',0:1000:1.1*1e4,'XScale','log');
 
 hold on; 
 plot([0 1.1*1e4],[0 0],'k--','Linewidth',2);

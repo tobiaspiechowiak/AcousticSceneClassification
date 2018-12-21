@@ -34,7 +34,7 @@ TrainingVector = [TrainingVector; gamma];
 
 
 %% Gammatone processing own voice
-for idxSubjects = 1:3
+for idxSubjects = 1:4
     gamma = [];
     for idxEar = 1:2
         sprintf('Ear %.2d',idxEar)

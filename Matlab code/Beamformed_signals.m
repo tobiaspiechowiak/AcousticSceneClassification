@@ -19,7 +19,7 @@ FD(1).car(1).signal = Two_Mic_BF(car(1).mic(1).training(1).external,...
     car(1).mic(2).training(1).external,fs);
 
 % own voice
-for i = 1:3
+for i = 1:4
     
     FD(1).ownVoice(i).signal = Two_Mic_BF(ownVoice(1).mic(1).training(i).voice,...
         ownVoice(1).mic(2).training(i).voice,fs);
@@ -89,7 +89,7 @@ FD(3).car(1).signal = Four_Mic_BF(car(1).mic(1).training(1).external, car(1).mic
     car(2).mic(1).training(1).external, car(2).mic(2).training(1).external, fs);
 
 % own voice
-for i = 1:3
+for i = 1:4
     
     FD(3).ownVoice(i).signal = Four_Mic_BF(ownVoice(1).mic(1).training(i).voice, ownVoice(1).mic(2).training(i).voice,...
     ownVoice(2).mic(1).training(i).voice, ownVoice(2).mic(2).training(i).voice, fs);

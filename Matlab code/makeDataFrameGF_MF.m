@@ -30,7 +30,7 @@ for idxSubjects = 1:1
         end
     end  
     %class labeling
-    gamma = gamma / max(max(gamma));
+    gamma = 1e-3*gamma;% / max(max(gamma));
     gamma = [gamma ones(size(gamma,1),1)];        
 end
 
@@ -40,7 +40,7 @@ TrainingVector = [TrainingVector; gamma];
 
 %% Gammatone processing own voice
 disp('own Voice');
-for idxSubjects = 1:3
+for idxSubjects = 1:4
     gamma = [];
     for idxEar = 1:2
         sprintf('Ear %.2d',idxEar)
@@ -59,7 +59,7 @@ for idxSubjects = 1:3
         end
     end
     %class labeling
-    gamma = gamma / max(max(gamma));
+    gamma = 1e-3*gamma;% / max(max(gamma));
     gamma = [gamma 2*ones(size(gamma,1),1)];        
     
     TrainingVector = [TrainingVector; gamma];
@@ -90,7 +90,7 @@ for idxSubjects = 1:1
         end
     end
     %class labeling
-    gamma = gamma / max(max(gamma));
+    gamma = 1e-3*gamma;% / max(max(gamma));
     gamma = [gamma 3*ones(size(gamma,1),1)];        
     TrainingVector = [TrainingVector; gamma];
 end
@@ -119,7 +119,7 @@ for idxSubjects = 1:2
         end
     end
     %class labeling
-    gamma = gamma / max(max(gamma));
+    gamma = 1e-3*gamma;% / max(max(gamma));
     gamma = [gamma 4*ones(size(gamma,1),1)];        
     TrainingVector = [TrainingVector; gamma];
 end
@@ -147,7 +147,7 @@ for idxSubjects = 1:1
         end
     end
     %class labeling
-    gamma = gamma / max(max(gamma));
+    gamma = 1e-3*gamma;% / max(max(gamma));
     gamma = [gamma 4*ones(size(gamma,1),1)];        
     TrainingVector = [TrainingVector; gamma];
 end
@@ -174,10 +174,11 @@ for idxSubjects = 1:2
         end
     end
     %class labeling
-    gamma = gamma / max(max(gamma));
+    gamma = 1e-3*gamma;% / max(max(gamma));
     gamma = [gamma 5*ones(size(gamma,1),1)];        
     TrainingVector = [TrainingVector; gamma];
 end
+
 
 
 TrainingVector = single(TrainingVector);

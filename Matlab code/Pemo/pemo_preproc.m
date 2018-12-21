@@ -11,7 +11,7 @@ freqRangeGF = [0 1e4];
 [nrGFChannel, cfGF] = getGFBMultipleCenterERBs(freqRangeGF,2);
 
 %parameter MF
-freqRangeMF = [0 500];
+freqRangeMF = [0 100];
 style = 2; % lowpass on = 1, off = 2
 den = 1;
 [a,~] = mfb2(1,freqRangeMF(1),freqRangeMF(2),den,style,fs);
